@@ -13,6 +13,7 @@ class CourseController extends Controller
 
     public function addCourse()
     {
+        return view("courses.add-courses");
     }
 
     public function trashCourse()

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 
 @include('custom.content-header')
 
 <body>
     <!--== MAIN CONTRAINER ==-->
-
     @include('custom.top-header')
+
     <!--== BODY CONTNAINER ==-->
     <div class="container-fluid sb2">
         <div class="row">
@@ -19,7 +19,7 @@
                     <ul>
                         <li><a href="index-2.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
                         </li>
-                        <li class="active-bre"><a href="#"> Dashboard</a>
+                        <li class="active-bre"><a href="#"> Add new student</a>
                         </li>
                         <li class="page-back"><a href="index-2.html"><i class="fa fa-backward" aria-hidden="true"></i>
                                 Back</a>
@@ -33,7 +33,7 @@
                         <div class="col-md-12">
                             <div class="box-inn-sp admin-form">
                                 <div class="inn-title">
-                                    <h4>Website Setting</h4>
+                                    <h4>Add New Student Informations</h4>
                                     <p>Here you can edit your website basic details URL, Phone, Email, Address, User and
                                         password and more</p>
                                 </div>
@@ -41,61 +41,60 @@
                                     <form>
                                         <div class="row">
                                             <div class="input-field col s6">
-                                                <input id="first_name" type="text" value="Education Master"
-                                                    class="validate" required>
-                                                <label for="first_name" class="">Website Title</label>
+                                                <input type="text" value="" class="validate" required>
+                                                <label class="">First name</label>
                                             </div>
                                             <div class="input-field col s6">
-                                                <input id="last_name" type="text"
-                                                    value="Education master is one of the best educational html template, it's suitable for all education websites like university,college,school,online eEducation,tution center,distance education,computer education"
-                                                    class="validate" required>
-                                                <label for="last_name" class="">Website descriptions</label>
+                                                <input type="text" value="" class="validate" required>
+                                                <label class="">Last name</label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s6">
-                                                <input id="phone" type="number" value="0152417841" class="validate"
-                                                    required>
-                                                <label for="phone">Phone number</label>
+                                                <input type="number" value="" class="validate" required>
+                                                <label class="">Phone number</label>
                                             </div>
                                             <div class="input-field col s6">
-                                                <input type="text" class="validate" value="education@master.com"
-                                                    required>
-                                                <label for="cphone" class="">Email is</label>
+                                                <input type="email" class="validate" value="" required>
+                                                <label class="">Email is</label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s6">
-                                                <input id="city" type="text" value="New york" class="validate">
-                                                <label for="city" class="">City</label>
+                                                <input type="text" value="" class="validate">
+                                                <label class="">City</label>
                                             </div>
                                             <div class="input-field col s6">
-                                                <input id="country" type="text" value="United States"
-                                                    class="validate">
-                                                <label for="country" class="">Country</label>
+                                                <input type="text" value="" class="validate">
+                                                <label class="">Country</label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s6">
-                                                <input id="password" type="password" value="srtg24356"
-                                                    class="validate">
-                                                <label for="password" class="">Password</label>
+                                                <input type="password" value="" class="validate">
+                                                <label class="">Password</label>
                                             </div>
                                             <div class="input-field col s6">
-                                                <input id="password1" type="password" value="sdfgh56dfg"
-                                                    class="validate">
-                                                <label for="password1" class="">Confirm Password</label>
+                                                <input type="password" value="" class="validate">
+                                                <label class="">Confirm Password</label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input type="text" value="www.educationmaster.com" class="validate">
-                                                <label>Website</label>
+                                                <input type="text" value="" class="validate">
+                                                <label>Student id</label>
                                             </div>
-                                            <div class="input-field col s12">
-                                                <input type="text" value="www.educationmaster.com/blog"
-                                                    class="validate">
-                                                <label>Website blog</label>
+                                        </div>
+                                        <div class="row">
+                                            <div class="file-field input-field col s12">
+                                                <div class="btn admin-upload-btn">
+                                                    <span>File</span>
+                                                    <input type="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text"
+                                                        placeholder="Profile image">
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -116,10 +115,7 @@
     </div>
 
     <!--Import jQuery before materialize.js-->
-    <script src="{{ asset('js/main.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('js/materialize.min.js') }}"></script>
-    <script src="{{ asset('js/custom.js') }}"></script>
+    @include('custom.script')
 </body>
 
 </html>
